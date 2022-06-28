@@ -4,13 +4,13 @@ NC='\033[0m'
 
 if [[ $OSTYPE == 'linux-android'* && $(echo "$TERMUX_VERSION" | cut -c 3-5) -ge "117" ]]; then
     pkg install git
-    git clone https://github.com/shawmeggy91/TataSky-Playlist-AutoUpdater || { rm -rf TataSky-Playlist-AutoUpdater; git clone https://github.com/shawmeggy91/TataSky-Playlist-AutoUpdater; }
+    git clone https://github.com/mightyworld1/TataSky-Playlist-AutoUpdater || { rm -rf TataSky-Playlist-AutoUpdater; git clone https://github.com/mightyworld1/TataSky-Playlist-AutoUpdater; }
     cd TataSky-Playlist-AutoUpdater;
     ./main.sh
 
 elif [[ $OSTYPE == 'linux-gnu'* ]]; then
     sudo apt install git
-    git clone https://github.com/shawmeggy91/TataSky-Playlist-AutoUpdater || { rm -rf TataSky-Playlist-AutoUpdater; git clone https://github.com/shawmeggy91/TataSky-Playlist-AutoUpdater; }
+    git clone https://github.com/mightyworld1/TataSky-Playlist-AutoUpdater || { rm -rf TataSky-Playlist-AutoUpdater; git clone https://github.com/mightyworld1/TataSky-Playlist-AutoUpdater; }
     cd TataSky-Playlist-AutoUpdater;
     ./main.sh
 elif [[ $(echo "$TERMUX_VERSION" | cut -c 3-5) -le "117" ]]; then
